@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a"
+    api-level="19"
+    density="mdpi"
+    format="7"
+    timestamp="13324654758245" >
+
+    <task
+        name="javac"
+        duration="7843" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="2492" />
+    <task
+        name="verifier"
+        duration="151" />
+
+    <artifact
+        location="/Users/vamsi/StudioProjects/SoundRealm 2/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="13324654758245" >
+        <artifact
+            location="/Users/vamsi/StudioProjects/SoundRealm 2/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

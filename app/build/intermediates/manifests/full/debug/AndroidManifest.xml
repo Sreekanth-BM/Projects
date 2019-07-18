@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.soundrealm"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.soundrealm.SoundActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.One"
+            android:label="@string/title_activity_one" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.FirstActivity"
+            android:label="@string/title_activity_first" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.Genre"
+            android:label="@string/title_activity_genre" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.Devotional"
+            android:label="@string/title_activity_devotional" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.GaneshMantram"
+            android:label="@string/title_activity_ganesh_mantram" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.ShiridiSaiBaba"
+            android:label="@string/title_activity_shiridi_sai_baba" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.Tollywood"
+            android:label="@string/title_activity_tollywood" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.Bollywood"
+            android:label="@string/title_activity_bollywood" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.HappyDays"
+            android:label="@string/title_activity_happy_days" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.Robo"
+            android:label="@string/title_activity_robo" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.Harimao_Harimao"
+            android:label="@string/title_activity_harimao__harimao" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.Boom_Boom"
+            android:label="@string/title_activity_boom__boom" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.Boom"
+            android:label="@string/title_activity_boom" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.Bahubali"
+            android:label="@string/title_activity_bahubali" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.Maahishmati"
+            android:label="@string/title_activity_maahishmati" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.MamatalaTali"
+            android:label="@string/title_activity_mamatala_tali" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.Eega"
+            android:label="@string/title_activity_eega" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.EegaTheme"
+            android:label="@string/title_activity_eega_theme" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.Lava"
+            android:label="@string/title_activity_lava" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.ChennaiExpress"
+            android:label="@string/title_activity_chennai_express" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.ChennaiExpressTheme"
+            android:label="@string/title_activity_chennai_express_theme" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.LungiDance"
+            android:label="@string/title_activity_lungi_dance" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.ChakDeIndia"
+            android:label="@string/title_activity_chak_de_india" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.ChekDe"
+            android:label="@string/title_activity_chek_de" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.BadalPePaonHai"
+            android:label="@string/title_activity_badal_pe_paon_hai" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.TaareZameenPar"
+            android:label="@string/title_activity_taare_zameen_par" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.BumBumBhole"
+            android:label="@string/title_activity_bum_bum_bhole" >
+        </activity>
+        <activity
+            android:name="com.example.soundrealm.Kholo_Kholo"
+            android:label="@string/title_activity_kholo__kholo" >
+        </activity>
+    </application>
+
+</manifest>

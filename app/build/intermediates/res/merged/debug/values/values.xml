@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">SoundRealm</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_badal_pe_paon_hai">BadalPePaonHai</string>
+    <string name="title_activity_bahubali">Bahubali</string>
+    <string name="title_activity_bollywood">Bollywood</string>
+    <string name="title_activity_boom">Boom</string>
+    <string name="title_activity_boom__boom">Boom_Boom</string>
+    <string name="title_activity_bum_bum_bhole">BumBumBhole</string>
+    <string name="title_activity_chak_de_india">ChakDeIndia</string>
+    <string name="title_activity_chek_de">ChekDe</string>
+    <string name="title_activity_chennai_express">ChennaiExpress</string>
+    <string name="title_activity_chennai_express_theme">ChennaiExpressTheme</string>
+    <string name="title_activity_devotional">Devotional</string>
+    <string name="title_activity_eega">Eega</string>
+    <string name="title_activity_eega_theme">EegaTheme</string>
+    <string name="title_activity_first">FirstActivity</string>
+    <string name="title_activity_ganesh_mantram">GaneshMantram</string>
+    <string name="title_activity_genre">Genre</string>
+    <string name="title_activity_happy_days">HappyDays</string>
+    <string name="title_activity_harimao__harimao">Harimao_Harimao</string>
+    <string name="title_activity_kholo__kholo">Kholo_Kholo</string>
+    <string name="title_activity_lava">Lava</string>
+    <string name="title_activity_lungi_dance">LungiDance</string>
+    <string name="title_activity_maahishmati">Maahishmati</string>
+    <string name="title_activity_mamatala_tali">MamatalaTali</string>
+    <string name="title_activity_one">One</string>
+    <string name="title_activity_robo">Robo</string>
+    <string name="title_activity_shiridi_sai_baba">ShiridiSaiBaba</string>
+    <string name="title_activity_taare_zameen_par">TaareZameenPar</string>
+    <string name="title_activity_tollywood">Tollywood</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+</resources>

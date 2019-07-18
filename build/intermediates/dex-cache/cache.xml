@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/vamsi/StudioProjects/SoundRealm 2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="25.0.2"
+        sha1="dc67e6309c5bb02f77e2f73ef22dd95dcdec5798">
+        <dex dex="/Users/vamsi/StudioProjects/SoundRealm 2/app/build/intermediates/pre-dexed/debug/instant-run_f7b1074b5bcf42fb8917a236cacfda40f0bacdfd.jar" />
+    </item>
+    <item
+        jar="/Users/vamsi/StudioProjects/SoundRealm 2/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="25.0.2"
+        sha1="0a53ace31236cafefae7103c9ac07503caacc977">
+        <dex dex="/Users/vamsi/StudioProjects/SoundRealm 2/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_c623aee7b0de719af60144b8aaee6c6fe47c58be.jar" />
+    </item>
+
+</items>

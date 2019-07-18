@@ -1,0 +1,221 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:2:1-139:12
+	package
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:3:5-37
+		INJECTED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:5:5-30
+		INJECTED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml
+	android:versionCode
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:7:5-9:41
+	android:targetSdkVersion
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:9:9-38
+		INJECTED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:8:9-35
+		INJECTED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml
+application
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:11:5-137:19
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:14:9-41
+	android:allowBackup
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:12:9-35
+	android:icon
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:13:9-45
+	android:theme
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:15:9-40
+activity#com.example.soundrealm.SoundActivity
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:16:9-24:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:18:13-45
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:17:13-42
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:19:13-23:29
+action#android.intent.action.MAIN
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:22:27-74
+activity#com.example.soundrealm.One
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:25:9-28:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:27:13-55
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:26:13-32
+activity#com.example.soundrealm.FirstActivity
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:29:9-32:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:31:13-57
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:30:13-42
+activity#com.example.soundrealm.Genre
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:33:9-36:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:35:13-57
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:34:13-34
+activity#com.example.soundrealm.Devotional
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:37:9-40:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:39:13-62
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:38:13-39
+activity#com.example.soundrealm.GaneshMantram
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:41:9-44:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:43:13-66
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:42:13-42
+activity#com.example.soundrealm.ShiridiSaiBaba
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:45:9-48:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:47:13-68
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:46:13-43
+activity#com.example.soundrealm.Tollywood
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:49:9-52:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:51:13-61
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:50:13-38
+activity#com.example.soundrealm.Bollywood
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:53:9-56:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:55:13-61
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:54:13-38
+activity#com.example.soundrealm.HappyDays
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:57:9-60:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:59:13-62
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:58:13-38
+activity#com.example.soundrealm.Robo
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:61:9-64:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:63:13-56
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:62:13-33
+activity#com.example.soundrealm.Harimao_Harimao
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:65:9-68:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:67:13-68
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:66:13-44
+activity#com.example.soundrealm.Boom_Boom
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:69:9-72:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:71:13-62
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:70:13-38
+activity#com.example.soundrealm.Boom
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:73:9-76:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:75:13-56
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:74:13-33
+activity#com.example.soundrealm.Bahubali
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:77:9-80:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:79:13-60
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:78:13-37
+activity#com.example.soundrealm.Maahishmati
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:81:9-84:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:83:13-63
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:82:13-40
+activity#com.example.soundrealm.MamatalaTali
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:85:9-88:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:87:13-65
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:86:13-41
+activity#com.example.soundrealm.Eega
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:89:9-92:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:91:13-56
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:90:13-33
+activity#com.example.soundrealm.EegaTheme
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:93:9-96:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:95:13-62
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:94:13-38
+activity#com.example.soundrealm.Lava
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:97:9-100:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:99:13-56
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:98:13-33
+activity#com.example.soundrealm.ChennaiExpress
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:101:9-104:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:103:13-67
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:102:13-43
+activity#com.example.soundrealm.ChennaiExpressTheme
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:105:9-108:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:107:13-73
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:106:13-48
+activity#com.example.soundrealm.LungiDance
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:109:9-112:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:111:13-63
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:110:13-39
+activity#com.example.soundrealm.ChakDeIndia
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:113:9-116:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:115:13-65
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:114:13-40
+activity#com.example.soundrealm.ChekDe
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:117:9-120:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:119:13-59
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:118:13-35
+activity#com.example.soundrealm.BadalPePaonHai
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:121:9-124:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:123:13-69
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:122:13-43
+activity#com.example.soundrealm.TaareZameenPar
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:125:9-128:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:127:13-68
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:126:13-43
+activity#com.example.soundrealm.BumBumBhole
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:129:9-132:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:131:13-65
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:130:13-40
+activity#com.example.soundrealm.Kholo_Kholo
+ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:133:9-136:20
+	android:label
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:135:13-64
+	android:name
+		ADDED from /Users/vamsi/StudioProjects/SoundRealm 2/app/src/main/AndroidManifest.xml:134:13-40

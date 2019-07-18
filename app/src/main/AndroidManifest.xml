@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.soundrealm"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".SoundActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".One"
+            android:label="@string/title_activity_one" >
+        </activity>
+        <activity
+            android:name=".FirstActivity"
+            android:label="@string/title_activity_first" >
+        </activity>
+        <activity
+            android:name=".Genre"
+            android:label="@string/title_activity_genre" >
+        </activity>
+        <activity
+            android:name=".Devotional"
+            android:label="@string/title_activity_devotional" >
+        </activity>
+        <activity
+            android:name=".GaneshMantram"
+            android:label="@string/title_activity_ganesh_mantram" >
+        </activity>
+        <activity
+            android:name=".ShiridiSaiBaba"
+            android:label="@string/title_activity_shiridi_sai_baba" >
+        </activity>
+        <activity
+            android:name=".Tollywood"
+            android:label="@string/title_activity_tollywood" >
+        </activity>
+        <activity
+            android:name=".Bollywood"
+            android:label="@string/title_activity_bollywood" >
+        </activity>
+        <activity
+            android:name=".HappyDays"
+            android:label="@string/title_activity_happy_days" >
+        </activity>
+        <activity
+            android:name=".Robo"
+            android:label="@string/title_activity_robo" >
+        </activity>
+        <activity
+            android:name=".Harimao_Harimao"
+            android:label="@string/title_activity_harimao__harimao" >
+        </activity>
+        <activity
+            android:name=".Boom_Boom"
+            android:label="@string/title_activity_boom__boom" >
+        </activity>
+        <activity
+            android:name=".Boom"
+            android:label="@string/title_activity_boom" >
+        </activity>
+        <activity
+            android:name=".Bahubali"
+            android:label="@string/title_activity_bahubali" >
+        </activity>
+        <activity
+            android:name=".Maahishmati"
+            android:label="@string/title_activity_maahishmati" >
+        </activity>
+        <activity
+            android:name=".MamatalaTali"
+            android:label="@string/title_activity_mamatala_tali" >
+        </activity>
+        <activity
+            android:name=".Eega"
+            android:label="@string/title_activity_eega" >
+        </activity>
+        <activity
+            android:name=".EegaTheme"
+            android:label="@string/title_activity_eega_theme" >
+        </activity>
+        <activity
+            android:name=".Lava"
+            android:label="@string/title_activity_lava" >
+        </activity>
+        <activity
+            android:name=".ChennaiExpress"
+            android:label="@string/title_activity_chennai_express" >
+        </activity>
+        <activity
+            android:name=".ChennaiExpressTheme"
+            android:label="@string/title_activity_chennai_express_theme" >
+        </activity>
+        <activity
+            android:name=".LungiDance"
+            android:label="@string/title_activity_lungi_dance" >
+        </activity>
+        <activity
+            android:name=".ChakDeIndia"
+            android:label="@string/title_activity_chak_de_india" >
+        </activity>
+        <activity
+            android:name=".ChekDe"
+            android:label="@string/title_activity_chek_de" >
+        </activity>
+        <activity
+            android:name=".BadalPePaonHai"
+            android:label="@string/title_activity_badal_pe_paon_hai" >
+        </activity>
+        <activity
+            android:name=".TaareZameenPar"
+            android:label="@string/title_activity_taare_zameen_par" >
+        </activity>
+        <activity
+            android:name=".BumBumBhole"
+            android:label="@string/title_activity_bum_bum_bhole" >
+        </activity>
+        <activity
+            android:name=".Kholo_Kholo"
+            android:label="@string/title_activity_kholo__kholo" >
+        </activity>
+    </application>
+
+</manifest>
