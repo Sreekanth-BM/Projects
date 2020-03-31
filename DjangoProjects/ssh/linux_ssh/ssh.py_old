@@ -1,0 +1,93 @@
+import requests
+from django.shortcuts import render, redirect
+import subprocess
+import concurrent.futures
+import re
+import paramiko
+
+def sshing(username,password,command,server,timer):
+  ssh = paramiko.SSHClient()
+  ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+  h = server.strip()
+  return username+command+h+password
+  """
+  for _ in range(1):
+    user,passwd,command = username.strip(),password.strip(),command.strip()
+    try: #SSH Connection to client
+      print('Executing on %s'%(h))
+      #ping check
+      try: 
+        ping_status = subprocess.check_output("fping %s"%(h),shell=True,universal_newlines=True)
+      except subprocess.CalledProcessError as e:
+        print("Ping Failed on %s"%(h))
+        #subprocess.call('curl -k  https://labs-splunk.wdf.global.corp.sap:8088/services/collector/event -H "Authorization: Splunk 9C305FBD-910F-4F68-AD97-3BFE9DB0B908" -d \'{"event": {"facility":"CHEF_HANDLER","status":"Ping failed","short_message":"Ping failed","Instancename":"%s","groupname":"%s","platform":"","platform_name":"","filesystem_availablesize":"","sism_service_group":"","sism_customer":"","uptime":"","missing_packages_count":"","patch_update_details":""},"index":"s4000_patch_mgmt"}\''%(h,group_name),shell=True)
+        return "Ping Failed"
+      #ssh check
+      try:
+        ssh.connect(hostname=h,username=user,password=passwd,timeout=9)
+      except socket.timeout:
+        print("SSH Failed on %s"%(h))
+        #subprocess.call('curl -k  https://labs-splunk.wdf.global.corp.sap:8088/services/collector/event -H "Authorization: Splunk 9C305FBD-910F-4F68-AD97-3BFE9DB0B908" -d \'{"event": {"facility":"CHEF_HANDLER","status":"SSH Failures","short_message":"SSH Failures","Instancename":"%s","groupname":"%s","platform":"","platform_name":"","filesystem_availablesize":"","sism_service_group":"","sism_customer":"","uptime":"","missing_packages_count":"","patch_update_details":""},"index":"s4000_patch_mgmt"}\''%(h,group_name),shell=True)
+        return "SSH Failed"
+      stdin,stdout,stderr = ssh.exec_command("%s"%(command),timeout=timer)
+      stdin.write("%s\n"%(passwd))
+      stdin.flush()
+      output,error=stdout.readlines(),stderr.readlines()
+      subprocess.call("echo %s >> %s-loggedin_%s.txt"%(h,desc,hostnames),shell=True)
+      #subprocess.call('curl -k  https://labs-splunk.wdf.global.corp.sap:8088/services/collector/event -H "Authorization: Splunk 9C305FBD-910F-4F68-AD97-3BFE9DB0B908" -d \'{"event": {"facility":"CHEF_HANDLER","status":"SSH Successful","short_message":"SSH Successful","Instancename":"%s","groupname":"%s","platform":"","platform_name":"","filesystem_availablesize":"","sism_service_group":"","sism_customer":"","uptime":"","missing_packages_count":"","patch_update_details":""},"index":"s4000_patch_mgmt"}\''%(h,group_name),shell=True)
+      print(output)
+      if len(output) == 0:
+        return classify_output(h,error)
+      else:
+        return classify_output(h,output)
+      
+    except paramiko.ssh_exception.AuthenticationException: #Wrong passwords
+      print('%s\'s password not accepted on %s'%(desc,h))
+      #subprocess.call('curl -k  https://labs-splunk.wdf.global.corp.sap:8088/services/collector/event -H "Authorization: Splunk 9C305FBD-910F-4F68-AD97-3BFE9DB0B908" -d \'{"event": {"facility":"CHEF_HANDLER","status":"Authentication Issue","short_message":"Authentication Issue","Instancename":"%s","groupname":"%s","platform":"","platform_name":"","filesystem_availablesize":"","sism_service_group":"","sism_customer":"","uptime":"","missing_packages_count":"","patch_update_details":""},"index":"s4000_patch_mgmt"}\''%(h,group_name),shell=True)
+      return "Login Issue"
+    except paramiko.ssh_exception.NoValidConnectionsError: #ConnectionRefused
+      print('Connection refused on %s'%(h))
+      #subprocess.call('curl -k  https://labs-splunk.wdf.global.corp.sap:8088/services/collector/event -H "Authorization: Splunk 9C305FBD-910F-4F68-AD97-3BFE9DB0B908" -d \'{"event": {"facility":"CHEF_HANDLER","status":"Connection Refused","short_message":"Connection Refused","Instancename":"%s","groupname":"%s","platform":"","platform_name":"","filesystem_availablesize":"","sism_service_group":"","sism_customer":"","uptime":"","missing_packages_count":"","patch_update_details":""},"index":"s4000_patch_mgmt"}\''%(h,group_name),shell=True)
+      return "Connection Refused"
+    except socket.gaierror: #Not in SISM
+      print("%s is not in SISM/Wrong hostname"%(h))
+      #subprocess.call('curl -k  https://labs-splunk.wdf.global.corp.sap:8088/services/collector/event -H "Authorization: Splunk 9C305FBD-910F-4F68-AD97-3BFE9DB0B908" -d \'{"event": {"facility":"CHEF_HANDLER","status":"Not in SISM","short_message":"Not in SISM","Instancename":"%s","groupname":"%s","platform":"","platform_name":"","filesystem_availablesize":"","sism_service_group":"","sism_customer":"","uptime":"","missing_packages_count":"","patch_update_details":""},"index":"s4000_patch_mgmt"}\''%(h,group_name),shell=True)
+      return "Not in SISM" # No need to check with another user authentication
+    except socket.timeout: #timeout either at connect or exec_command
+      print("Timeout to execute command on %s"%(h))
+      #subprocess.call('curl -k  https://labs-splunk.wdf.global.corp.sap:8088/services/collector/event -H "Authorization: Splunk 9C305FBD-910F-4F68-AD97-3BFE9DB0B908" -d \'{"event": {"facility":"CHEF_HANDLER","status":"CMD Timed Out","short_message":"CMD Timed Out","Instancename":"%s","groupname":"%s","platform":"","platform_name":"","filesystem_availablesize":"","sism_service_group":"","sism_customer":"","uptime":"","missing_packages_count":"","patch_update_details":""},"index":"s4000_patch_mgmt"}\''%(h,group_name),shell=True)
+      return "Timed out"
+    except paramiko.ssh_exception.SSHException: #Others ssh issues
+      print('connection-refused')
+      #subprocess.call('curl -k  https://labs-splunk.wdf.global.corp.sap:8088/services/collector/event -H "Authorization: Splunk 9C305FBD-910F-4F68-AD97-3BFE9DB0B908" -d \'{"event": {"facility":"CHEF_HANDLER","status":"Connection Refused","short_message":"Connection Refused","Instancename":"%s","groupname":"%s","platform":"","platform_name":"","filesystem_availablesize":"","sism_service_group":"","sism_customer":"","uptime":"","missing_packages_count":"","patch_update_details":""},"index":"s4000_patch_mgmt"}\''%(h,group_name),shell=True)
+      return "Connection Refused"
+    except socket.error:
+      print('os eror')
+      return "os error"
+    except:
+      print('something unknown')
+      return "Unknown error"
+    finally:
+      if ssh:
+        ssh.close()
+
+def classify_output(h,output):
+  output = ''.join(output)
+  output = output.strip()
+  return output
+  """
+
+def sshing_view(request):
+  if request.method == 'POST':
+    server = request.POST['server']
+    username = request.POST['username']
+    password = request.POST['password']
+    command = request.POST['command']
+    timer = 100
+    output = sshing(username,password,command,server,timer)
+    print(output)
+    context = {
+	'output':output
+	} 
+    return render(request,'linux_ssh/ssh.html',context)
+

@@ -1,0 +1,69 @@
+<html>
+<head>
+<style>
+.design {
+  font-size:18;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 15%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.left h2 {
+  padding-left: 0px;
+}
+
+.right {
+  flex: 85%;
+  padding: 10px;
+}
+
+.right h2 {
+  text-align: center;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 9px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#myMenu li a {
+  padding: 0;
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+</style>
+</head>
+<body class='design'>
+  {% block bg %}
+  {% endblock %}
+</body>
+</html>

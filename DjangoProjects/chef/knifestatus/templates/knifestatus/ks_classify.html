@@ -1,0 +1,13 @@
+{% extends 'homepage.html' %}
+{% block menu_block %}
+<li><a href="http://:8000/">HOME</a><li><br>
+<li><a href="{% url 'ks_mainpage' %}">KNIFE STATUS</a><li><br>
+<li><a href="{% url 'ks_classify' %}">CLASSIFICATION</a></li><br>
+{% endblock %}
+{% block display_block %}
+<center>
+<p>We fetch you all servers status in CHEF, like  Reporting to CHEF or Not-Reporting to CHEF</p>
+<button><a href="{% url 'ks_classification' %}">REPORTING & NOT-REPORTING SERVERS</a></button>
+</center>
+{% endblock %}
+

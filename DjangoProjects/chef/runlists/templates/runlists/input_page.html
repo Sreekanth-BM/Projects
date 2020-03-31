@@ -1,0 +1,28 @@
+{% extends 'homepage.html' %}
+{% block menu_block %}
+<li><a href="http://:8000/">HOME</a><li><br>
+<li><a href="{% url 'runlist_mainpage' %}">RUNLISTS</a><li><br>
+<li><a href="{% url 'append_to_runlist' %}">MANAGE RUNLISTS</a></li><br>
+{% endblock %}
+{% block display_block %}
+<center>
+<form method="post" action="{% url 'runlist_solo_input' %}">
+{% csrf_token %}
+<label><input type="radio" name='action' value='add' checked>ADD</label>
+<label><input type="radio" name='action' value='remove'>REMOVE</label><br><br>
+<label>Cookbook:&emsp;<input type="text" name='cookbook' placeholder='Enter cookbook name'></label><br><br>
+<label>Solo-Input:&emsp;<input type="text" name='host_input' placeholder='Enter hostname'></label><br><br>
+<label><input type="submit" value='submit'></label>
+</form>
+<p>OR</p>
+<form method="post" action="{% url 'runlist_file_input' %}" enctype="multipart/form-data">
+{% csrf_token %}
+<label><input type="radio" name='action' value='add' checked>ADD</label>
+<label><input type="radio" name='action' value='remove'>REMOVE</label><br><br>
+<label>Cookbook:&emsp;<input type="text" name='cookbook' placeholder='Enter cookbook name'></label><br><br>
+<label>File-Input:&emsp;<input type="file" name="f1"></label><br><br>
+<label><input type="submit" value="submit"></label>
+</form>
+</center>
+{% endblock %}
+

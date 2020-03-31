@@ -1,0 +1,40 @@
+{% extends 'homepage.html' %}
+  {% block menu_block %}
+  <li><a href="http://:8000/">HOME</a><li><br>
+  <li><a href="{% url 'ks_mainpage' %}">KNIFE STATUS</a><li><br>
+  <li><a href="{% url 'ks_classify' %}">CLASSIFICATION</a></li><br>
+{% endblock %}
+
+{% block display_block %}
+<button onclick="exportTableToCSV('output_data.csv')">Export Output To CSV File</button><br><br>
+
+  {% if knifestatus_report.empty == False %}
+  <table border="1px">
+     <tr><th>Hostnames</th><th>Last reported</th><th>Status</th><th>Platform</th></tr>
+     {% for index,row in knifestatus_report.iterrows %}
+       <tr><td>{{ index }}</td><td>{{ row.Time }}</td><td>{{ row.Status }}</td><td>{{ row.Platform }}</td></tr>
+     {% endfor %}
+  </table>
+  {% endif %}
+
+  {% if ks_solo_output_content.empty == False  %}
+  <table border="1px">
+     <tr><th>Hostnames</th><th>Last reported</th><th>Status</th><th>Platform</th></tr>
+     {% for index,row in ks_solo_output_content.iterrows %}
+       <tr><td>{{ index }}</td><td>{{ row.Time }}</td><td>{{ row.Status }}</td><td>{{ row.Platform }}</td></tr>
+     {% endfor %}
+  </table>
+  {% endif %}
+
+  {% if output_content %}
+  <table border="1px">
+        <tr><th>Input Hosts</th><th>KnifeStatus</th><th>Status</th><th>CHEF Hostnames</th></tr>
+        {% for host  in output_content %}
+                {% for index,row in host.iterrows %}
+                <tr><td>{{ index }}</td><td>{{ row.KnifeStatus }}</td><td>{{ row.Status }}</td><td>{{ row.CHEF_Hostnames}}</td></tr>
+                {% endfor %}
+        {% endfor %}
+  </table>
+  {% endif %}
+{% endblock %}
+

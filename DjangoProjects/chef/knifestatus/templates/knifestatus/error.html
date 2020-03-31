@@ -1,0 +1,10 @@
+{% extends 'homepage.html' %}
+{% block menu_block %}
+<li><a href="http://mo-e4e82ab0f:8000/">HOME</a><li><br>
+<li><a href="{% url 'ks_mainpage' %}">KNIFE STATUS</a><li><br>
+{% endblock %}
+
+{% block display_block %}
+<p>From knife status, Error occured, please try again/Check console for log</p>
+{% endblock %}
+

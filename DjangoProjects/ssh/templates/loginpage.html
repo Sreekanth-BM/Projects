@@ -1,0 +1,20 @@
+{% extends 'homepage.html' %}
+
+{% block menu_block %}
+<li><a href="http://hostname:8000/">HOME</a></li><br>
+{% endblock %}
+
+{% block display_block %}
+<center>
+<h1>LOGIN</h1>
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+<label>Username: <input type='text' name='username'></label><br>
+<label>Password: <input type='password' name='password'></label><br>
+<label><input type="submit" value='Login'></label>
+{% if request.GET.next %}
+  <input type='hidden' name='next' value="{{ request.GET.next }}">
+{% endif %}
+</form>
+</center>
+{% endblock %}

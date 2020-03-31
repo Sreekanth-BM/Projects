@@ -1,0 +1,18 @@
+{% extends 'homepage.html' %}
+
+{% block menu_block %}
+<li><a href="http://:8000/">HOME</a></li><br>
+<li><a href="http://:8000/knifestatus/">KNIFE STATUS</a></li><br>
+<li><a href="http://:8000/runlists/">RUNLISTS</a></li><br>
+<li><a href="{% url 'cv_homepage' %}">CHEF VERSION</a></li><br>
+{% endblock %}
+
+{% block display_block %}
+<center><h1>CHEF</h1>
+<h3>Feel the taste of ease</h3>
+<li>You can find server's reporting status in CHEF</li>
+<li>You can manage runlists of servers</li>
+
+<p style="color:red">{{ user }}</p>
+</center>
+{% endblock %}

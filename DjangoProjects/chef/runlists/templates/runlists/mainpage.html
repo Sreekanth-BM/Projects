@@ -1,0 +1,13 @@
+{% extends 'homepage.html' %}
+{% block menu_block %}
+<li><a href="http://:8000/">HOME</a><li><br>
+<li><a href="{% url 'runlist_mainpage' %}">RUNLISTS</a><li><br>
+<li><a href="{% url 'append_to_runlist' %}">MANAGE RUNLISTS</a></li><br>
+{% endblock %}
+{% block display_block %}
+<center>
+<h2>We server you to manage runlists</h2><br>
+<li>Adding cookbook to runlist</li>
+</center>
+{% endblock %}
+

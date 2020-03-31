@@ -1,0 +1,24 @@
+{% extends 'homepage.html' %}
+{% block menu_block %}
+<li><a href="http://:8000/">HOME</a><li><br>
+<li><a href="{% url 'ks_mainpage' %}">KNIFE STATUS</a><li><br>
+<li><a href="{% url 'ks_classify' %}">CLASSIFICATION</a></li><br>
+{% endblock %}
+{% block display_block %}
+<center>
+<h2>We help to find knife status of servers</h2>
+<form method="post" action="{% url 'ks_solo_input' %}">
+{% csrf_token %}
+<label>KnifeStatus by Criteria:<input type="text" size="50" name='criteria' placeholder="Ex: os:linux or platform:redhat"></label><br><br>
+<!-- <label>Solo-Input:&emsp;<input type="text" name='host_input' placeholder='Enter hostname'></label><br><br> -->
+<label><input type="submit" value='submit'></label>
+</form>
+<p>OR</p>
+<form method="post" action="{% url 'ks_file_input' %}" enctype="multipart/form-data">
+{% csrf_token %}
+<label>KnifeStatus for list of servers <input type="file" name="f1"></label><br><br>
+<label><input type="submit" value="submit"></label>
+</form>
+</center>
+{% endblock %}
+

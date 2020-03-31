@@ -1,0 +1,26 @@
+{% extends 'homepage.html' %}
+{% block menu_block %}
+<li><a href="http://hostname:8000/">HOME</a><li><br>
+<li><a href="{% url 'ssh_homepage' %}">LINUX</a><li><br>
+{% endblock %}
+{% block display_block %}
+{% if linux_solo_output.empty == False  %}
+<table border="1px">
+	<tr><th>Hostnames</th><th>Output</th><th>Status</th></tr>
+        {% for index,row in linux_solo_output.iterrows %}
+ 		<tr><td>{{ index }}</td><td>{{ row.Output }}</td><td>{{ row.Status }}</td></tr>
+   	{% endfor %}
+</table>
+{% endif %}
+{% if linux_multi_output %}
+  <table border="1px">
+	<tr><th>Hostnames</th><th>Runlist</th><th>Status</th></tr>
+	{% for host in linux_multi_output %}
+		{% for index,row in host.iterrows %}
+        	<tr><td>{{ index }}</td><td>{{ row.Output }}</td><td>{{ row.Status }}</td></tr>
+		{% endfor %}
+ 	{% endfor %} 
+  </table>
+{% endif %}
+{% endblock %}
+

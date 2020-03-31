@@ -1,0 +1,29 @@
+{% extends 'homepage.html' %}
+  {% block menu_block %}
+  <li><a href="http://:8000/">HOME</a><li><br>
+  <li><a href="{% url 'runlist_mainpage' %}">RUNLISTS</a><li><br>
+  <li><a href="{% url 'append_to_runlist' %}">MANAGE RUNLISTS</a></li><br>
+{% endblock %}
+
+{% block display_block %}
+<button onclick="exportTableToCSV('output_data.csv')">Export Output To CSV File</button><br><br>
+  {% if runlist_solo_output_content.empty == False  %}
+  <table border="1px">
+	<tr><th>Hostnames</th><th>Runlists</th><th>Status</th></tr>
+        {% for index,row in runlist_solo_output_content.iterrows %}
+ 		<tr><td>{{ index }}</td><td>{{ row.Runlist }}</td><td>{{ row.Status }}</td></tr>
+   	{% endfor %}
+  </table>
+  {% endif %}
+  {% if output_content %}
+  <table border="1px">
+	<tr><th>Hostnames</th><th>Runlist</th><th>Status</th></tr>
+	{% for host  in output_content %}
+		{% for index,row in host.iterrows %}
+        	<tr><td>{{ index }}</td><td>{{ row.Runlist}}</td><td>{{ row.Status }}</td></tr>
+		{% endfor %}
+ 	{% endfor %} 
+  </table>
+  {% endif %}
+{% endblock %}
+
