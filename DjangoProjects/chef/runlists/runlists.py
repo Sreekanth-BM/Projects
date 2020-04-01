@@ -35,7 +35,6 @@ def solo_input(request):
       action_to_do = action_to_do.strip()
       appended=append_to_runlist(h=h,cb=cookbook_name,action=action_to_do)
       context={
-        #"output_loc":"/opt/c5271982/DJ/outputs/runlists/runlist_%s"%(h),
 	"runlist_solo_output_content":appended
       }
       return render(request,'runlists/runlists_output.html',context)
@@ -66,7 +65,6 @@ def file_input(request):
         for i in e.map(func,hosts_list):
           output_data.append(i)
       context={
-        #"output_loc":"/opt/c5271982/DJ/outputs/runlists/runlist_%s"%(uploaded_file.name),
         "output_content":output_data
       }
       return render(request,'runlists/runlists_output.html',context)
