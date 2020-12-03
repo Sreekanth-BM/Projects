@@ -1,22 +1,22 @@
 {% extends 'homepage.html' %}
 {% block menu_block %}
 <li><a href="{% url 'homepage' %}">HOME</a><li><br>
-<li><a href="{% url 'ssh_homepage' %}">LINUX</a><li><br>
+<li><a href="{% url 'wssh_homepage' %}">WINDOWS</a><li><br>
 {% endblock %}
 {% block display_block %}
 <button onclick="exportTableToCSV('output_data.csv')">Export Output To CSV File</button><br><br>
-{% if linux_solo_output.empty == False  %}
+{% if windows_solo_output.empty == False  %}
 <table border="1px">
 	<tr><th>Hostnames</th><th>Output</th><th>Status</th></tr>
-        {% for index,row in linux_solo_output.iterrows %}
+        {% for index,row in windows_solo_output.iterrows %}
  		<tr><td>{{ index }}</td><td>{{ row.Output }}</td><td>{{ row.Status }}</td></tr>
    	{% endfor %}
 </table>
 {% endif %}
-{% if linux_multi_output %}
+{% if windows_multi_output %}
   <table border="1px">
 	<tr><th>Hostnames</th><th>Output</th><th>Status</th></tr>
-	{% for host in linux_multi_output %}
+	{% for host in windows_multi_output %}
 		{% for index,row in host.iterrows %}
         	<tr><td>{{ index }}</td><td>{{ row.Output }}</td><td>{{ row.Status }}</td></tr>
 		{% endfor %}

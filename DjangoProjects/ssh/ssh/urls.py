@@ -22,5 +22,6 @@ urlpatterns = [
     path('',views.homepage_view,name='homepage'),
     path('login/',views.login_view,name='login'),
     path('logout/',views.logout_view,name='logout'),
-    path('linux_ssh/',include('linux_ssh.urls'))
+    path('linux_ssh/',include('linux_ssh.urls')),
+    path('windows_winrm/',include('windows_winrm.urls'))
 ]

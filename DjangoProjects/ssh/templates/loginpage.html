@@ -1,7 +1,7 @@
 {% extends 'homepage.html' %}
 
 {% block menu_block %}
-<li><a href="http://hostname:8000/">HOME</a></li><br>
+<li><a href="{% url 'homepage' %}">HOME</a></li><br>
 {% endblock %}
 
 {% block display_block %}

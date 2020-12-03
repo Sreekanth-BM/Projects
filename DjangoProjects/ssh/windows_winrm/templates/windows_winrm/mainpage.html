@@ -1,27 +1,27 @@
 {% extends 'homepage.html' %}
 {% block menu_block %}
 <li><a href="{% url 'homepage' %}">HOME</a><li><br>
-<li><a href="{% url 'ssh_homepage' %}">LINUX</a><li><br>
+<li><a href="{% url 'wssh_homepage' %}">WINDOWS</a><li><br>
 {% endblock %}
 {% block display_block %}
 <center>
 <h3>Solo Execution</h3>
-<form action="{% url 'linux_solo_input' %}" method='post'>
+<form action="{% url 'windows_solo_input' %}" method='post'>
 {% csrf_token %}
 <label>Server name:&emsp;<input type='text'  name='server'></label><br><br>
 <label>Username:&emsp;<input type='text' name='username'></label><br>
 <label>Password:&emsp;<input type='password' name='password'></label><br>
-<label>Command:&emsp;<input type='text' size="100" name='command' placeholder="Prefix 'sudo -S' for CMD, like sudo -S top"></label><br><br>
+<label>Command:&emsp;<input type='text' size="100" name='command' placeholder="Enter command"></label><br><br>
 <label><input type='submit' value='Submit'></label>
 </form>
 <br>
 <h3>Multiple Execution</h3>
-<form method="post" action="{% url 'linux_multi_input' %}" enctype="multipart/form-data">
+<form method="post" action="{% url 'windows_multi_input' %}" enctype="multipart/form-data">
 {% csrf_token %}
 <label>Servers list:&emsp;<input type="file" name="server_file"></label><br><br>
 <label>Username:&emsp;<input type='text' name='username'></label><br>
 <label>Password:&emsp;<input type='password' name='password'></label><br>
-<label>Command:&emsp;<input type='text' size="100" name='command' placeholder="Prefix 'sudo -S' for CMD, like sudo -S top"></label><br><br>
+<label>Command:&emsp;<input type='text' size="100" name='command'></label><br><br>
 <label><input type="submit" value="Submit"></label>
 </form>
 </center>

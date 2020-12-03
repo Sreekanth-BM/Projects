@@ -8,7 +8,7 @@ import re
 import paramiko
 import pandas as pd
 
-def sshing(username,password,command,timer,server):
+def sshing(username,password,command,server):
   pd.set_option('display.max_rows', None)
   pd.set_option('display.max_columns', None)
   pd.set_option('display.width', None)
@@ -17,9 +17,6 @@ def sshing(username,password,command,timer,server):
   ssh = paramiko.SSHClient()
   ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
   h = server.strip()
-  username = username.strip()
-  password = password.strip()
-  command = command.strip()
   try:
     #Ping Check
     status = "Failed"
@@ -27,7 +24,6 @@ def sshing(username,password,command,timer,server):
       ping_status = subprocess.check_output("fping %s"%(h),shell=True,universal_newlines=True)
     except:
       output = "Ping Failed"
-      #return "Ping Failed"
     else:
       try:
         ssh.connect(hostname=h,username=username,password=password,timeout=9)
@@ -43,19 +39,32 @@ def sshing(username,password,command,timer,server):
         output = "SSH Failed"
       else:
         try:
-          stdin,stdout,stderr = ssh.exec_command("%s"%(command),timeout=100)
+          stdin,stdout,stderr = ssh.exec_command("%s"%(command),timeout=300)
           stdin.write("%s\n"%(password))
           stdin.flush()
           output, error = stdout.readlines(), stderr.readlines()
           if len(output) == 0:
+            #LoggedIn, ErrorOccured
             output = ''.join([x.strip() for x in error])
           else:
+            #LoggedIn    
             output = ''.join([x.strip() for x in output])
-            status = "Successful"
+            if 'Chef Client finished' in output:
+              status = "Successful"
+            elif 'Authorization Error' in output:
+              status = "Unsuccessful, Error 403"
+            elif 'Authentication Error' in output:
+              status = "Unsuccessful, Error 401"
+            elif 'PrivateKeyMissing' in output:
+              status = 'PrivateKeyMissing'
+            elif 'Chef Client Failed' in output:
+              status = "Unsuccsesful, Chef Client failed"
+            else:
+              status = "Successful/Unsuccessful"
         except socket.timeout:
           output =  "CMD execution timedout"
         except socket.error:
-          output = "OS Error" 
+          output = "OS Error"
     finally:
       s1 = pd.Series({h:output})
       s2 = pd.Series({h:status})
@@ -69,8 +78,7 @@ def sshing_view(request):
   if request.method == 'POST':
     server = request.POST['server']
     username,password,command = get_details(request)
-    timer = 100
-    output = sshing(username,password,command,timer,server)
+    output = sshing(username,password,command,server)
     context = {
 	'linux_solo_output':output
 	} 
@@ -82,11 +90,10 @@ def multi_sshing_view(request):
     username,password,command = get_details(request)
     hosts_list = []
     output = []
-    timer = 100
     for host in servers:
       host = str(host,'utf-8').strip()
       hosts_list.append(host)
-    func = partial(sshing,username,password,command,timer)
+    func = partial(sshing,username,password,command)
     with concurrent.futures.ThreadPoolExecutor() as e:
       for i in e.map(func,hosts_list):
          output.append(i)

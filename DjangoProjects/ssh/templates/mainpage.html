@@ -1,17 +1,16 @@
 {% extends 'homepage.html' %}
 
 {% block menu_block %}
-<li><a href="http://hostname:8000/">HOME</a></li><br>
-<!-- <li><a href="http://mo-e4e82ab0f:8000/linux_ssh/">LINUX</a></li><br> -->
+<li><a href="{% url 'homepage' %}">HOME</a></li><br>
 <li><a href="{% url 'ssh_homepage' %}">LINUX</a></li><br>
-<!-- <li><a href="http://mo-e4e82ab0f:8000/windows_winrm/">WINDOWS</a></li><br> -->
+<li><a href="{% url 'wssh_homepage' %}">WINDOWS</a></li><br>
 {% endblock %}
 
 {% block display_block %}
 <center><h1>Goodbye Manual, Welcome Automation</h1>
 <h3>Please feel free to talk with servers</h3>
-<li>You can run any linux commands</li>
-<li>Manage chef missing nodes and it sents report to splunk</li>
+<li>You can run linux commands remotely</li>
+<li>You can run windows commands remotely</li>
 <p style="color:red">{{ user }}</p>
 </center>
 {% endblock %}
