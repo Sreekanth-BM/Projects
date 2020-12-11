@@ -33,6 +33,7 @@
       .chef(Starter kit)
       chef (Project)
 
+- Please add 'hostname' to ALLOWED_HOSTS list in [settings.py](https://docs.djangoproject.com/en/1.11/ref/settings/#allowed-hosts) file
+
 - Browse `http://<hostname>:8000` to start application, here hostname is the server name, on which you run this project
 
-  - Please add 'hostname' to ALLOWED_HOSTS list in [settings.py](https://docs.djangoproject.com/en/1.11/ref/settings/#allowed-hosts) file
