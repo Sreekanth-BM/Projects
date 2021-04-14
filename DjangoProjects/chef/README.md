@@ -20,7 +20,7 @@
 
 - **CHEF Version**:
   - Login is required to access this module.
-  - Finds chef-client version for given servers and sends data to splunk.
+  - Finds chef-client version for given servers.
 
 #### **How to run this project**
 
